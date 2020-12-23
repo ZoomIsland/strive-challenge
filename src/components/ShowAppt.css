@@ -1,0 +1,64 @@
+.apptShow {
+  border: 1px solid #E6E5E6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  height: 80px;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.icon {
+  color: #6B8EF3;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #E6E5E6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.touchDetail {
+  width: 250px;
+}
+
+h3, h4 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.touchDetail h3, .taskJoiner {
+  color: #B8B6B8;
+}
+h4 {
+  color: #5C5D5F;
+  margin: 4px 0px;
+}
+
+.respBtns {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+.confirm, .deny, .pushOver {
+  color: #D7D7D7;
+}
+.pushOver {
+  margin-right: 15px;
+}
+
+.apptShow:hover {
+  background: #F1F2FE;
+  border: 1px solid #D7D6F1;
+}
+
+.apptShow:hover .confirm,
+.apptShow:hover .deny {
+  color: #B3B6E6;
+}
+.apptShow:hover .pushOver {
+  color: #8C91CB;
+}
