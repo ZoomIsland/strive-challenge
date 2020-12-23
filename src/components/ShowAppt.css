@@ -1,3 +1,8 @@
+.apptContainer {
+  position: relative;
+  width: 550px;
+}
+
 .apptShow {
   border: 1px solid #E6E5E6;
   display: flex;
@@ -8,6 +13,18 @@
   cursor: pointer;
   background: #FFFFFF;
   transition: all 350ms;
+  z-index: 10;
+  position: relative;
+  z-index: 10;
+}
+
+.closeDrawer {
+  position: absolute;
+  top: 32px;
+  left: 15px;
+  z-index: 2;
+  color: #BEBAE6;
+  cursor: pointer;
 }
 
 .icon {
@@ -83,10 +100,13 @@ h4 {
 .deny:hover i {
   color: #838AD5;
 }
+.closeDrawer:hover {
+  color: #838AD5;
+}
 
 /* open appt styles */
 .openAppt {
-  margin-left: 100px;
+  margin-left: 50px;
 }
 .openAppt .pushOver {
   opacity: 0;
