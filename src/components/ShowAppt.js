@@ -4,7 +4,7 @@ import './ShowAppt.css';
 
 function ShowAppt(props) {
   return (
-    <div className="apptShow" style={props.style}>
+    <div className={"apptShow " + (props.open ? "openAppt" : "")} style={props.style} onClick={props.toggleOpen}>
       <div className="icon">
         {props.appt.task === "Call" && <i className="fas fa-phone-alt"></i>}
         {props.appt.task === "Manual task" && <i className="fab fa-linkedin"></i>}

@@ -1,6 +1,6 @@
 import react from 'react';
 
-import ShowAppt from '../components/ShowAppt';
+import ApptContainer from './ApptContainer';
 
 function ApptList(props) {
   function getStyle(index, length) {
@@ -23,7 +23,7 @@ function ApptList(props) {
     return (
       <div className="timeContainer" key={timeIndex}>
         <h2>{timeSlot.time}</h2>
-        {timeSlot.appts.map((appt, apptIndex) => <ShowAppt appt={appt} key={apptIndex} id={apptIndex} style={getStyle(apptIndex, timeSlot.appts.length)} />
+        {timeSlot.appts.map((appt, apptIndex) => <ApptContainer appt={appt} key={apptIndex} id={apptIndex} style={getStyle(apptIndex, timeSlot.appts.length)} />
         )}
       </div>
     )

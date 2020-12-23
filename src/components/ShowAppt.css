@@ -7,6 +7,7 @@
   height: 80px;
   cursor: pointer;
   background: #FFFFFF;
+  transition: all 350ms;
 }
 
 .icon {
@@ -45,11 +46,21 @@ h4 {
 }
 .confirm, .deny, .pushOver {
   color: #D7D7D7;
-}
-.pushOver {
-  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.pushOver {
+  margin-right: 15px;
+  opacity: 1;
+  transition: opacity 350ms;
+}
+
+/* hover functionality */
 .apptShow:hover {
   background: #F1F2FE;
   border: 1px solid #D7D6F1;
@@ -57,8 +68,36 @@ h4 {
 
 .apptShow:hover .confirm,
 .apptShow:hover .deny {
-  color: #B3B6E6;
+  color: #B4B9E7;
 }
 .apptShow:hover .pushOver {
   color: #8C91CB;
+}
+
+.confirm:hover,
+.deny:hover {
+  background: white;
+  border: 1px solid #E6E5E6;
+}
+.confirm:hover i,
+.deny:hover i {
+  color: #838AD5;
+}
+
+/* open appt styles */
+.openAppt {
+  margin-left: 100px;
+}
+.openAppt .pushOver {
+  opacity: 0;
+}
+.openAppt {
+  background: #F1F2FE;
+  border: 1px solid #D7D6F1;
+}
+.openAppt .confirm,
+.openAppt .deny {
+  color: #B3B6E6;
+  background: white;
+  border: 1px solid #E6E5E6;
 }
