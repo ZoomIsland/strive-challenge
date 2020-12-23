@@ -1,5 +1,7 @@
 import react, { useState } from 'react';
 
+import ApptList from'./containers/ApptList';
+
 import './App.css';
 
 function App() {
@@ -49,8 +51,8 @@ function App() {
 
   return (
     <div className="App">
-
-      Blank App
+      {/* for each appt, render time and list. */}
+      <ApptList appts={appts} />
     </div>
   );
 }
