@@ -19,7 +19,7 @@ function App() {
         {
           client: "Malik Simpson",
           touchpoint: 4,
-          task: "Manual Task",
+          task: "Manual task",
           notes: "Rekindling ancient embers"
         },
         {
@@ -42,7 +42,7 @@ function App() {
         {
           client: "Xavier St. D'Augustine",
           touchpoint: 1,
-          task: "Manual Task",
+          task: "Manual task",
           notes: "Ignore and solicit on"
         },
       ]
