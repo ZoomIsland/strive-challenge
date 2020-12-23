@@ -39,7 +39,8 @@
   margin: 15px;
 }
 
-.touchDetail {
+.touchDetail,
+.touchQuestion {
   width: 250px;
 }
 
