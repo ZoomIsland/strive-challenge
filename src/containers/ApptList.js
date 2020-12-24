@@ -28,9 +28,9 @@ function ApptList(props) {
           {timeSlot.appts.map((appt, apptIndex) => {
             return (
               <CSSTransition
-                timeout={700}
+                timeout={350}
                 classNames="appt"
-                key={`time${timeIndex}appt${apptIndex}`}
+                key={appt.id}
                 unmountOnExit>
                 <ApptContainer appt={appt} id={`time${timeIndex}appt${apptIndex}`} style={getStyle(apptIndex, timeSlot.appts.length)} handleDismiss={props.handleDismiss} />
               </CSSTransition>

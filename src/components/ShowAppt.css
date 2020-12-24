@@ -127,10 +127,12 @@ h4 {
 .appt-exit {
   opacity: 1;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .appt-exit-active {
   opacity: 0;
   margin-left: -200px;
+  margin-bottom: -80px;
   transition: all 350ms ease-in;
 }

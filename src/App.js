@@ -1,4 +1,5 @@
 import react, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import ApptList from'./containers/ApptList';
 
@@ -14,19 +15,22 @@ function App() {
           client: "Avni Submaranian",
           touchpoint: 3,
           task: "Call",
-          notes: "Inbound NY"
+          notes: "Inbound NY",
+          id: uuidv4() 
         },
         {
           client: "Malik Simpson",
           touchpoint: 4,
           task: "Manual task",
-          notes: "Rekindling ancient embers"
+          notes: "Rekindling ancient embers",
+          id: uuidv4() 
         },
         {
           client: "Javroni F. Myers",
           touchpoint: 3,
           task: "Call",
-          notes: "Shaming bottom-feeders"
+          notes: "Shaming bottom-feeders",
+          id: uuidv4() 
         },
       ]
     },
@@ -37,13 +41,15 @@ function App() {
           client: "Yvette Mok",
           touchpoint: 1,
           task: "LinkedIn message",
-          notes: "Ignore and solicit on"
+          notes: "Ignore and solicit on",
+          id: uuidv4() 
         },
         {
           client: "Xavier St. D'Augustine",
           touchpoint: 1,
           task: "Manual task",
-          notes: "Ignore and solicit on"
+          notes: "Ignore and solicit on",
+          id: uuidv4() 
         },
       ]
     },
