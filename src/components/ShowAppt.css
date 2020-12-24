@@ -37,7 +37,25 @@
   justify-content: center;
   align-items: center;
   margin: 15px;
+  position: relative;
 }
+.manualLI:after {
+  content: "+";
+  position: absolute;
+  font-size: 12px;
+  top: 4px;
+  font-weight: bold;
+}
+.liTail:after {
+  content: "❫";
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  bottom: 4px;
+  left: 20px;
+  transform: rotate(50deg);
+}
+
 
 .touchDetail,
 .touchQuestion {

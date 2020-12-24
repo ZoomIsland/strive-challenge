@@ -16,9 +16,9 @@ function ShowAppt(props) {
       case "Call":
         return <i className="fas fa-phone-alt"></i>;
       case "Manual task":
-        return <i className="fab fa-linkedin"></i>;
+        return <i className="fab fa-linkedin manualLI"></i>;
       case "LinkedIn message":
-        return <i className="fab fa-linkedin"></i>;
+        return <i className="fab fa-linkedin liTail"></i>;
     }
   }
 
