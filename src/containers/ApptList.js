@@ -1,6 +1,7 @@
 import react from 'react';
 
 import ApptContainer from './ApptContainer';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 function ApptList(props) {
   function getStyle(index, length) {
@@ -23,15 +24,26 @@ function ApptList(props) {
     return (
       <div className="timeContainer" key={timeIndex}>
         <h2>{timeSlot.time}</h2>
-        {timeSlot.appts.map((appt, apptIndex) => <ApptContainer appt={appt} key={apptIndex} id={`time${timeIndex}appt${apptIndex}`} style={getStyle(apptIndex, timeSlot.appts.length)} handleDismiss={props.handleDismiss} />
-        )}
+        <TransitionGroup>
+          {timeSlot.appts.map((appt, apptIndex) => {
+            return (
+              <CSSTransition
+                timeout={700}
+                classNames="appt"
+                key={`time${timeIndex}appt${apptIndex}`}
+                unmountOnExit>
+                <ApptContainer appt={appt} id={`time${timeIndex}appt${apptIndex}`} style={getStyle(apptIndex, timeSlot.appts.length)} handleDismiss={props.handleDismiss} />
+              </CSSTransition>
+            )}
+          )}
+        </TransitionGroup>
       </div>
     )
   })
 
   return(
     <div className="apptList">
-      {timeMap}
+        {timeMap}
     </div>
   )
 }

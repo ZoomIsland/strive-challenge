@@ -49,12 +49,14 @@ function App() {
     },
   ])
 
-  const handleDismiss = (id) => {
+  const handleDismiss = (e) => {
+    e.stopPropagation();
+    console.log(e.target.id)
     // find where appt begins (and therefore the time array ends)
-    let apptStart = id.indexOf("appt");
+    let apptStart = e.target.id.indexOf("appt");
     // parse individual values for target
-    let timeValue = parseInt(id.substring(4, apptStart));
-    let apptValue = parseInt(id.substring(apptStart+4, id.length));
+    let timeValue = parseInt(e.target.id.substring(4, apptStart));
+    let apptValue = parseInt(e.target.id.substring(apptStart+4, e.target.id.length));
 
     // dupe array
     let apptsToChange = [...appts];
