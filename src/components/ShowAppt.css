@@ -154,3 +154,35 @@ h4 {
   margin-bottom: -80px;
   transition: all 350ms ease-in;
 }
+
+@media only screen and (max-width: 550px) {
+  .apptContainer {
+    width: 100vw;
+  }
+  .apptShow {
+    width: 100vw;
+  }
+  .touchDetail,
+  .touchQuestion {
+    width: 200px;
+  }
+  .respBtns {
+    width: 65px;
+  }
+  .icon, .confirm, .deny, .pushOver {
+    width: 30px;
+    height: 30px;
+  }
+  .openAppt {
+    margin-left: 30px;
+  }
+  h3, h4 {
+    font-size: 12px;
+  }
+  .liTail:after {
+    content: ""
+  }
+  .closeDrawer {
+    left: 10px;
+  }
+}

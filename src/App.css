@@ -28,3 +28,9 @@
   color: #BBBBBE;
   margin: 25px;
 }
+
+@media only screen and (max-width: 550px) {
+  .apptList {
+    margin-left: 0;
+  }
+}
