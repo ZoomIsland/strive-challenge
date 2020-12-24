@@ -15,8 +15,8 @@ function ApptContainer(props) {
 
   return (
     <div className="apptContainer">
-      <div className="closeDrawer" onClick={toggleOpen}><i class="fas fa-chevron-left"></i></div>
-      <ShowAppt appt={props.appt} id={props.id} style={props.style} open={open} toggleOpen={toggleOpen} />
+      <div className="closeDrawer" onClick={toggleOpen}><i className="fas fa-chevron-left"></i></div>
+      <ShowAppt appt={props.appt} id={props.id} style={props.style} open={open} toggleOpen={toggleOpen} handleDismiss={props.handleDismiss} />
     </div>
   )
 }

@@ -39,8 +39,8 @@ function ShowAppt(props) {
         </div>
       }
       <div className="respBtns">
-        <div className="confirm"><i className="fas fa-check"></i></div>
         <div className="deny"><i className="fas fa-times"></i></div>
+        <div className="confirm" onClick={()=>props.handleDismiss(props.id)}><i className="fas fa-check"></i></div>
       </div>
       <div className="pushOver">
         <i className="fas fa-chevron-right"></i>

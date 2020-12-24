@@ -23,7 +23,7 @@ function ApptList(props) {
     return (
       <div className="timeContainer" key={timeIndex}>
         <h2>{timeSlot.time}</h2>
-        {timeSlot.appts.map((appt, apptIndex) => <ApptContainer appt={appt} key={apptIndex} id={apptIndex} style={getStyle(apptIndex, timeSlot.appts.length)} />
+        {timeSlot.appts.map((appt, apptIndex) => <ApptContainer appt={appt} key={apptIndex} id={`time${timeIndex}appt${apptIndex}`} style={getStyle(apptIndex, timeSlot.appts.length)} handleDismiss={props.handleDismiss} />
         )}
       </div>
     )

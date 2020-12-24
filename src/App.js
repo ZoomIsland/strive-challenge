@@ -49,10 +49,25 @@ function App() {
     },
   ])
 
+  const handleDismiss = (id) => {
+    // find where appt begins (and therefore the time array ends)
+    let apptStart = id.indexOf("appt");
+    // parse individual values for target
+    let timeValue = parseInt(id.substring(4, apptStart));
+    let apptValue = parseInt(id.substring(apptStart+4, id.length));
+
+    // dupe array
+    let apptsToChange = [...appts];
+    // target array based on timeValue
+    apptsToChange[timeValue].appts.splice(apptValue, 1);
+    //update state
+    setAppts(apptsToChange);
+  }
+
   return (
     <div className="App">
       {/* for each appt, render time and list. */}
-      <ApptList appts={appts} />
+      <ApptList appts={appts} handleDismiss={handleDismiss} />
     </div>
   );
 }
